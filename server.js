@@ -11,6 +11,10 @@ app.get("/resume", function(req, res){
     let path = __dirname+"/frontend/html/myresume.html";
     res.sendFile(path);
 })
+app.get("/apple", function(req, res){
+    let path = __dirname+"/frontend/html/apple.html";
+    res.sendFile(path);
+})
     app.get("/google", function(req, res){
         let path = __dirname+"/frontend/html/google.html";
         res.sendFile(path);

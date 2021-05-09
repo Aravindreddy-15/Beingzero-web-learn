@@ -1,0 +1,33 @@
+<html><head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'problems solved');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['leetcode', 1],
+          ['codechef', 11],
+          ['vjudge', 89],
+          ['mentorpick', 60],
+          ['codeforces', 2],
+        ]);
+        var options = {'title':'CHART',
+                       'width':400,
+                       'height':300};
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/50/loader.js"></script>
+  <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/50/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/50/css/util/util.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/50/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/50/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/50/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/50/js/jsapi_compiled_corechart_module.js"></script></head>
+
+  <body>
+    <div id="chart_div"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 400px; height: 300px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="400" height="300" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_0"><filter id="_ABSTRACT_RENDERER_ID_1"><feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur><feOffset dx="1" dy="1"></feOffset><feComponentTransfer><feFuncA type="linear" slope="0.1"></feFuncA></feComponentTransfer><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><rect x="0" y="0" width="400" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="77" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">problems solved in various websites</text><rect x="77" y="29" width="247" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="248" y="58" width="76" height="47" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g column-id="codechef"><rect x="248" y="58" width="76" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="263" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">codechef</text></g><circle cx="253.5" cy="63.5" r="5.5" stroke="none" stroke-width="0" fill="#dc3912"></circle></g><g column-id="vjudge"><rect x="248" y="76" width="76" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="263" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">vjudge</text></g><circle cx="253.5" cy="81.5" r="5.5" stroke="none" stroke-width="0" fill="#ff9900"></circle></g><g column-id="mentorpick"><rect x="248" y="94" width="76" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="263" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">mentorpick</text></g><circle cx="253.5" cy="99.5" r="5.5" stroke="none" stroke-width="0" fill="#109618"></circle></g></g><g><path d="M154,151L154,75A76,76,0,0,1,176.30771555589905,78.34763715695752L154,151A0,0,0,0,0,154,151" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path></g><g><path d="M154,151L176.30771555589905,78.34763715695752A76,76,0,0,1,164.26000105285004,226.3042653399893L154,151A0,0,0,0,0,154,151" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path><text text-anchor="start" x="187.30583853121368" y="158.82412955355116" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">43.1%</text></g><g><path d="M154,151L164.26000105285004,226.3042653399893A76,76,0,1,1,154,75L154,151A0,0,0,1,0,154,151" stroke="#ffffff" stroke-width="1" fill="#109618"></path><text text-anchor="start" x="89.60061992137113" y="158.16588597296368" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">52.2%</text></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>problems solved</th><th>Slices</th></tr></thead><tbody><tr><td>leetcode</td><td>0</td></tr><tr><td>codechef</td><td>11</td></tr><tr><td>vjudge</td><td>100</td></tr><tr><td>mentorpick</td><td>121</td></tr><tr><td>codeforces</td><td>0</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 310px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">121 (52.2%)</div><div></div></div></div>
+  
+</body></html>

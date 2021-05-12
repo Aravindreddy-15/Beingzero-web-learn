@@ -4,7 +4,8 @@ const app = express();
 app.use(express.static("frontend"));
 
 app.get("/", function(req, res){
-    res.send("hello");
+    let path = __dirname+"/frontend/html/home.html";
+    res.sendFile(path);
 })
 
 app.get("/resume", function(req, res){
@@ -15,7 +16,10 @@ app.get("/login", function(req, res){
     let path = __dirname+"/frontend/html/login.html";
     res.sendFile(path);
 })
-
+app.get("/todo", function(req, res){
+    let path = __dirname+"/frontend/html/todo.html";
+    res.sendFile(path);
+})
 app.get("/colorpicker", function(req, res){
     let path = __dirname+"/frontend/html/colorpicker.html";
     res.sendFile(path);

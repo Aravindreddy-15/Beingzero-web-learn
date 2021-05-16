@@ -77,3 +77,29 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, function(){
     console.log("Server Starting running on http://localhost:"+PORT);
 })
+var a=[]
+app.get('/api/todos', function(req,res){
+    
+    res.json(a);
+
+})
+app.post('/api/todo', function(req,res){
+    a.push(req.body);
+
+    res.json(a);
+
+})
+
+app.patch('/api/todo/mark', function(req,res){
+    console.log(req.body)
+    a[req.body.index].isactive=false;
+    
+    res.json(a);
+})
+app.patch('/api/todo/remove', function(req,res){
+    console.log(req.body.index)
+    a[req.body.index].isdeleted=true;
+    
+    res.json(a);
+})
+

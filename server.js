@@ -1,10 +1,16 @@
 const { urlencoded } = require('express');
 const express = require('express');
-
+const mongoose = require('mongoose');
+var connectionString = "mongodb+srv://Aravind:aravind1572@cluster0.hwvgk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongoose.connect(connectionString);
+mongoose.connection.on('connected',function(){
+    console.log("connection established");
+})
 const app = express();
 app.use(express.static("frontend"));
 app.use(express.urlencoded({extended : true}));
 app.use(express.json());
+
 
 var users =[{
     username: "first", email:"firstmail@gmail.com",id :"1"
@@ -20,6 +26,10 @@ app.get("/resume", function(req, res){
 })
 app.get("/validation", function(req, res){
     let path = __dirname+"/frontend/html/validation.html";
+    res.sendFile(path);
+})
+app.get("/crudop", function(req, res){
+    let path = __dirname+"/frontend/html/crudop.html";
     res.sendFile(path);
 })
 app.get("/login", function(req, res){
@@ -102,4 +112,5 @@ app.patch('/api/todo/remove', function(req,res){
     
     res.json(a);
 })
+app.use("/api", require("./backend/api/courselib"));
 

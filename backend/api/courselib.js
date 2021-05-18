@@ -36,7 +36,7 @@ router.post("/courselib", (req, res) => {
         })
 })
 
-router.put('/courses/:courseid', (req, res) => {
+router.put('/courselib/:courseid', (req, res) => {
     itemlib.updateItemField({ _id: req.params.courseid }, req.body, Coursemodel, (err, updateddetails) => {
         if (err)
             res.status(404).json({

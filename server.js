@@ -44,6 +44,10 @@ app.get("/colorpicker", function(req, res){
     let path = __dirname+"/frontend/html/colorpicker.html";
     res.sendFile(path);
 })
+app.get("/tambola", function(req, res){
+    let path = __dirname+"/frontend/html/tambola.html";
+    res.sendFile(path);
+})
 
 app.get("/google", function(req, res){
         let path = __dirname+"/frontend/html/google.html";

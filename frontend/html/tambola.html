@@ -1,0 +1,91 @@
+<html><head></head>
+   <body>
+         <h1><center> TAMBOLA  </center></h1>
+         <table width="60%">
+           <tbody><tr>
+             <td>
+               <div id="board"><table border="1"><tbody><tr><td id="td1"><font size="6">1</font></td><td id="td2"><font size="6">2</font></td><td id="td3"><font size="6">3</font></td><td id="td4"><font size="6">4</font></td><td id="td5"><font size="6">5</font></td><td id="td6"><font size="6">6</font></td><td id="td7"><font size="6">7</font></td><td id="td8"><font size="6">8</font></td><td id="td9"><font size="6">9</font></td><td id="td10"><font size="6">10</font></td><td id="td11"><font size="6">11</font></td><td id="td12"><font size="6">12</font></td><td id="td13"><font size="6">13</font></td><td id="td14"><font size="6">14</font></td><td id="td15"><font size="6">15</font></td><td id="td16"><font size="6">16</font></td><td id="td17"><font size="6">17</font></td><td id="td18"><font size="6">18</font></td><td id="td19"><font size="6">19</font></td><td id="td20"><font size="6">20</font></td><td id="td21"><font size="6">21</font></td><td id="td22"><font size="6">22</font></td><td id="td23"><font size="6">23</font></td><td id="td24"><font size="6">24</font></td><td id="td25"><font size="6">25</font></td><td id="td26"><font size="6">26</font></td><td id="td27"><font size="6">27</font></td><td id="td28"><font size="6">28</font></td><td id="td29"><font size="6">29</font></td><td id="td30"><font size="6">30</font></td></tr><tr><td id="td31"><font size="6">31</font></td><td id="td32"><font size="6">32</font></td><td id="td33"><font size="6">33</font></td><td id="td34"><font size="6">34</font></td><td id="td35"><font size="6">35</font></td><td id="td36"><font size="6">36</font></td><td id="td37"><font size="6">37</font></td><td id="td38"><font size="6">38</font></td><td id="td39"><font size="6">39</font></td><td id="td40"><font size="6">40</font></td><td id="td41"><font size="6">41</font></td><td id="td42"><font size="6">42</font></td><td id="td43"><font size="6">43</font></td><td id="td44"><font size="6">44</font></td><td id="td45"><font size="6">45</font></td><td id="td46"><font size="6">46</font></td><td id="td47"><font size="6">47</font></td><td id="td48"><font size="6">48</font></td><td id="td49"><font size="6">49</font></td><td id="td50"><font size="6">50</font></td><td id="td51"><font size="6">51</font></td><td id="td52"><font size="6">52</font></td><td id="td53"><font size="6">53</font></td><td id="td54"><font size="6">54</font></td><td id="td55"><font size="6">55</font></td><td id="td56"><font size="6">56</font></td><td id="td57"><font size="6">57</font></td><td id="td58"><font size="6">58</font></td><td id="td59"><font size="6">59</font></td><td id="td60"><font size="6">60</font></td></tr><tr><td id="td61"><font size="6">61</font></td><td id="td62"><font size="6">62</font></td><td id="td63"><font size="6">63</font></td><td id="td64"><font size="6">64</font></td><td id="td65"><font size="6">65</font></td><td id="td66"><font size="6">66</font></td><td id="td67"><font size="6">67</font></td><td id="td68"><font size="6">68</font></td><td id="td69"><font size="6">69</font></td><td id="td70"><font size="6">70</font></td><td id="td71"><font size="6">71</font></td><td id="td72"><font size="6">72</font></td><td id="td73"><font size="6">73</font></td><td id="td74"><font size="6">74</font></td><td id="td75"><font size="6">75</font></td><td id="td76"><font size="6">76</font></td><td id="td77"><font size="6">77</font></td><td id="td78"><font size="6">78</font></td><td id="td79"><font size="6">79</font></td><td id="td80"><font size="6">80</font></td><td id="td81"><font size="6">81</font></td><td id="td82"><font size="6">82</font></td><td id="td83"><font size="6">83</font></td><td id="td84"><font size="6">84</font></td><td id="td85"><font size="6">85</font></td><td id="td86"><font size="6">86</font></td><td id="td87"><font size="6">87</font></td><td id="td88"><font size="6">88</font></td><td id="td89"><font size="6">89</font></td><td id="td90"><font size="6">90</font></td></tr></tbody></table></div>
+             </td>
+             <td align="left">PREVIOUS NUMBER</td>
+             <td align="right"><font size="20"><div id="prenumber"> </div></font></td>
+            </tr>
+         </tbody></table><br><br>
+         <h1></h1><table width="60%">
+              <tbody><tr><td align="center"><font size="30"><div id="number"></div></font></td></tr>
+              <tr><td align="center">
+              <input type="button" name="next" value="NEW NUMBER" onclick="generatenum();">Click this to proceed to number
+              </td></tr><tr><td>
+              <input type="button" name="Reset" value="NEW GAME" onclick="clearn();"> Refreshing the Page wont start a new game - Click this button to Start a New Game
+              </td></tr>
+          </tbody></table>
+
+<script language="javascript">
+var array = new Array();
+var array2= new Array();
+var prenum="";
+for(i=1;i<=90;i++){
+    array2.push(i);
+}
+if (sessionStorage.length != 0){
+    for(i=0;i<=90;i++){
+        if(sessionStorage.getItem(i) != null) {
+            array.push(i);
+            var index = array2.indexOf(i);
+            array2.splice(index, 1);
+        }
+    }
+    document.getElementById('number').innerHTML=sessionStorage.key(0);
+    document.getElementById('prenumber').innerHTML=sessionStorage.key(1);
+    prenum=sessionStorage.key(1);
+}
+
+function clearn(){
+    sessionStorage.clear();
+    array.splice(0,array.length);
+    array2.splice(0,array2.length);
+    for(i=1;i<=90;i++){
+        array2.push(i);
+    }
+    recreatetable(0);
+    document.getElementById('number').innerHTML="";
+    document.getElementById('prenumber').innerHTML="";
+    prenum="none";
+}
+
+function generatenum(){
+    var num = array2[Math.floor(Math.random() * array2.length)];
+    document.getElementById('number').innerHTML=num;
+    document.getElementById('prenumber').innerHTML=prenum;
+    recreatetable(num);
+    prenum=num;
+}
+
+function recreatetable(addkey) {
+       
+    var boardhtml = "<table border='1'>";
+       if(addkey != '0'){
+       array.push(addkey);
+       sessionStorage.setItem(addkey,"done");
+       var index = array2.indexOf(addkey);
+       array2.splice(index, 1);
+       }
+       for(i=1;i<=90;i++){
+           if(i==1 || i==31 || i==61){
+       
+           boardhtml += "<tr>";
+       }
+       if(array.indexOf(i) > -1){
+            boardhtml += "<td bgcolor='red' id='td" + i + "'><font size='6'>" + i + "</font></td>";
+       } else {
+            boardhtml += "<td id='td" + i + "'><font size='6'>" + i + "</font></td>";
+       }
+       if(i==30 || i==60 || i==90){       
+        boardhtml += "</tr>";
+       }
+      }
+    boardhtml += "</table>";
+    document.getElementById('board').innerHTML=boardhtml;
+}
+recreatetable(0);
+</script>
+</body></html>

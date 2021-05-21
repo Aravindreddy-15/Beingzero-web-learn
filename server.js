@@ -1,7 +1,8 @@
 const { urlencoded } = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
-var connectionString = "mongodb+srv://Aravind:aravind1572@cluster0.hwvgk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+require("dotenv").config();
+var connectionString = process.env.connectionString;
 mongoose.connect(connectionString);
 mongoose.connection.on('connected',function(){
     console.log("connection established");
